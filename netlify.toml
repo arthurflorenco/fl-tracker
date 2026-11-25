@@ -1,4 +1,4 @@
-# Deploy da demo pública (https://fl-tracker.netlify.app).
+# Deploy da demo pública (https://flstutracker.netlify.app).
 # O Next.js é detetado pela Netlify (adapter oficial). SESSION_SECRET define-se no painel
 # da Netlify, nunca aqui: este repositório é público.
 [build]
