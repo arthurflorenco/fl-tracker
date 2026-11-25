@@ -6,6 +6,8 @@ Job tracking for window and glazing companies: from the first quote to the insta
 
 ![CI](https://github.com/arthurflorenco/fl-tracker/actions/workflows/ci.yml/badge.svg)
 
+**Live demo: https://fl-tracker.netlify.app** — no sign-up: pick any person on the sign-in screen. Everything is fictitious; anyone can use any account, so the data may change and can be reset from the *Guide* button.
+
 ## What it does
 
 | For the workshop and site teams | For the office and management |
