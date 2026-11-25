@@ -1,0 +1,44 @@
+# Integração contínua: corre em cada push e pull request.
+# Se qualquer passo falhar, o commit fica marcado a vermelho no GitHub.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Tipos (TypeScript)
+        run: npm run typecheck
+
+      - name: Lint (ESLint)
+        run: npm run lint
+
+      - name: Formatação (Prettier)
+        run: npx prettier --check src scripts
+
+      - name: Testes (Vitest)
+        run: npm test
+
+      - name: SQL e regras RLS (PGlite)
+        run: npm run db:verificar
+
+      - name: Build de produção
+        run: npm run build
