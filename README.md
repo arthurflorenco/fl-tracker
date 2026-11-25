@@ -4,7 +4,7 @@ Job tracking for window and glazing companies: from the first quote to the insta
 
 > Originally built as an MVP for a real aluminium joinery business and published here with permission. Every company, person, project, place and amount in this repository is fictitious.
 
-![CI](https://github.com/OWNER/fl-tracker/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/arthurflorenco/fl-tracker/actions/workflows/ci.yml/badge.svg)
 
 ## What it does
 
